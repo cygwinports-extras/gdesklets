@@ -1,0 +1,6 @@
+category: X11
+requires: libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libgtop2.0_7 librsvg2_2 libX11_6 python python-gtk2.0 python-gconf2 python-bonobo2 python-orbit python-gnomevfs2
+sdesc: "gDesklets desktop applet system"
+ldesc: "gDesklets provides an advanced architecture for desktop applets 
+- tiny displays that sit on your desktop in a symbiotic relationship of 
+eye candy and usefulness."

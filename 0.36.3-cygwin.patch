@@ -1,0 +1,15 @@
+--- origsrc/gdesklets-0.36.3/libdesklets/system/ArchFactory.py	2008-03-19 18:00:58.000000000 -0500
++++ src/gdesklets-0.36.3/libdesklets/system/ArchFactory.py	2011-03-08 01:47:33.994641700 -0600
+@@ -7,10 +7,10 @@ def create_arch():
+ 
+ def __detect_arch():
+ 
+-    import os
++    import sys, os
+     uname = os.uname()
+ 
+-    if (uname[0] == 'Linux'):
++    if (uname[0] == 'Linux' or sys.platform == 'cygwin'):
+ 
+         import Linux
+ 

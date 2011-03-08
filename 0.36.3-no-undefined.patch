@@ -1,0 +1,9 @@
+--- origsrc/gdesklets-0.36.3/Makefile_gdesklets.am	2011-03-08 00:41:36.280607300 -0600
++++ src/gdesklets-0.36.3/Makefile_gdesklets.am	2011-03-08 00:42:59.226013600 -0600
+@@ -1,5 +1,5 @@
+ # Set the LDFLAGS for this section
+-AM_LDFLAGS = -module -avoid-version -as-needed
++AM_LDFLAGS = -module -avoid-version -no-undefined -lpython$(PYTHON_VERSION)
+ 
+ # Libraries that get installed in these exact subdirectories
+ nobase_install_LTLIBRARIES = \
