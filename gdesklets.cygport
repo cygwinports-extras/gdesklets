@@ -1,0 +1,28 @@
+inherit python gnome2
+
+NAME="gdesklets"
+VERSION=0.36.3
+RELEASE=2
+CATEGORY="X11"
+SUMMARY="gDesklets desktop applet system"
+DESCRIPTION="gDesklets provides an advanced architecture for desktop applets,
+tiny displays that sit on your desktop in a symbiotic relationship of eye candy
+and usefulness."
+HOMEPAGE="http://gdesklets.de/"
+SRC_URI="http://gdesklets.de/files/${P}.tar.bz2"
+
+PATCH_URI="
+	mirror://portage/gnome-extra/gdesklets-core/files/gdesklets-core-0.36.3-.in-files.patch
+	0.36.3-cygwin.patch
+	0.36.3-no-undefined.patch
+"
+
+#REQUIRES="libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libgtop2.0_7 librsvg2_2 libX11_6 python python-gtk2.0 python-gconf2 python-bonobo2 python-orbit python-gnomevfs2"
+
+MAKEOPTS+=" -j1"
+
+src_install() {
+	cd ${B}
+	cyginstall
+	python_optimize /usr/lib/gdesklets
+}
