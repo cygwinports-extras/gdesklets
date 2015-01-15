@@ -2,7 +2,7 @@ inherit python gnome2
 
 NAME="gdesklets"
 VERSION=0.36.3
-RELEASE=2
+RELEASE=3
 CATEGORY="X11"
 SUMMARY="gDesklets desktop applet system"
 DESCRIPTION="gDesklets provides an advanced architecture for desktop applets,
